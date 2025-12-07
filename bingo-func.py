@@ -1,13 +1,15 @@
 from random import randint
 
-
 rand_number = randint(1, 10)
 guess_rand = 5
 current_round = 0
+
+
 def check_guess(guessed_number):
     if guessed_number == rand_number:
         return True
     return False
+
 
 while True:
     current_round += 1
@@ -22,9 +24,9 @@ while True:
         if guess_input < rand_number:
             print("guess higher")
         else:
-            print("guess lower")    
-            
- # check for round counts
+            print("guess lower")
+
+    # check for round counts
     if current_round > guess_rand:
-        print("You have failed to guess, so you have lost the game") 
-        break       
+        print("You have failed to guess, so you have lost the game")
+        break
